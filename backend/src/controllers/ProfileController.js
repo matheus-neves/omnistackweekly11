@@ -6,6 +6,7 @@ module.exports = {
 
     const ong_id = req.headers.authorization;
 
+    console.log(ong_id)
     const incidents = await connection('incidents')
       .where('ong_id', ong_id)
       .select('*');
