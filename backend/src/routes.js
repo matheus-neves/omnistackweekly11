@@ -46,7 +46,7 @@ routes.post('/incidents', celebrate({
   [Segments.BODY]: Joi.object().keys({
     title: Joi.string().required(),
     description: Joi.string().required(),
-    value: Joi.number().strict().required(),
+    value: Joi.string().strict().required(),
   })
 }), IncidentController.create);
 
